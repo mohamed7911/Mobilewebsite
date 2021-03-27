@@ -1,0 +1,36 @@
+<%- include('head.ejs')%>
+<body>
+    <%- include('navbar.ejs')%>
+    <div class="container">
+      <form action="/add-employee" method="POST" enctype="multipart/form-data">
+        <div class="row mt-5" >
+
+        <div class="col-md-6">
+            <div class="form-group  ">
+                <input name="name" type="text" class="form-control" placeholder="name">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <select class="selectpicker" name="brand" data-style="btn-info">
+                <optgroup label="Select Table">
+                  <% for( let index = 0; index < result.length; index++ ) { %>
+                      <option><%= result[index].name %></option>
+                  <% } %>
+                </optgroup>
+            </select>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <input name="img" type="file" class="form-control" id="inputimg" placeholder="Image">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <input name="desc" class="form-control" id="inputEmail" placeholder="desc">
+            </div>
+        </div>
+        <button class="btn btn-primary w-100">Submit</button>    
+    </form>
+    </div>
+<%- include('end.ejs')%>

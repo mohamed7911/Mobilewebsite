@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1400px;
+}
+/*navbar*/
+.z{
+    z-index: 9;
+}
+.navbar{
+    background-color: #222;
+    display: none;
+}
+.dashbtn{
+    display: inline;
+}
+.dashbtn div{
+    background-color: #fff;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 3px;
+}
+.carticon{
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+.sidebar{
+    width: 25%;
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    height: 100%;
+    background-color: #1f2021;
+    transition: all 1s;
+    overflow-y: auto;
+}
+.searchinp::placeholder {
+    color: #fff !important;
+}
+.searchinp{
+    border-radius: 20px;
+    border: 1px #fff solid;
+    padding: 7px;
+    display: none;
+}
+.leftsidebar{
+    left: -100%;
+}
+.rightsidebar{
+    right: -100%;
+}
+.rightnavwall{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 75%;
+    right: 100%;
+    height: 100%;
+    margin-right: auto;
+    transition: all 1s;
+    z-index: 1027;
+}
+.leftnavwall{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 75%;
+    left: 100%;
+    height: 100%;
+    margin-right: auto;
+    transition: all 1s;
+    z-index: 1027;
+}
+.leftlogo p{
+    font-size: 30px;
+}
+.leftlist a{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.leftlist li{
+    margin-bottom: 20px;
+}
+.formdiv{
+    width: 100% !important;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.formdiv input{
+    width: 100% !important;
+}
+.seabtn{
+    position: absolute;
+    top: 36%;
+    right: 6%;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+}
+.downnave{
+    display: none;
+    position:fixed;
+    top: 6%;
+    width: 100%;
+    background-color: rgb(31, 32, 33);
+    z-index: 6;
+}
+.downnavhead{
+    color: #fff;
+}
+.downnavlist a{
+    color: #6c757d;
+}
+.firstnav{
+    background-color: #ebeeef;
+}
+.navheader{
+    font-size: 70px;
+    font-weight: bolder;
+    color: #000;
+}
+.nava{
+    font-size: 18px;
+    color: #000;
+}
+.nava:hover{
+    text-decoration: none;
+    color: #000;
+}
+.count{
+    font-size: 20px;
+}
+.quan{
+    display: flex;
+}
+.total{
+    font-size: 25px;
+    font-weight: bold;
+}
+@media screen and (max-width: 760px)
+{
+    .formdiv{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 414px)
+{
+    .quan{
+        display: block;
+    }
+}
+@media screen and (max-width:1000px)
+{
+    .navbar-nav{
+        flex-direction: row;
+    }
+    .navbar-nav a{
+        padding: 8px !important;
+    }
+    .sidebar{
+        width: 75%;
+    }
+    .navbar-brand{
+        margin: auto;
+    }
+    .navbar-nav{
+        display: none !important;
+    }
+    .searchform{
+        display: none;
+    }
+}
+@media screen and (min-width: 1000px)
+{
+    .dashbtn{
+        display: none !important;
+    }
+    .leftsidebar{
+        left: -100%;
+    }
+}
+/*navbar*/
+/*login*/
+.login{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.logwall{
+    height: 75%;
+    width: 900px;
+    background-image: url(../images/log5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.logexit{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+.logicon{
+    padding: 30px 35px;
+    font-size: 60px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+.nameino{
+    background-color: transparent; 
+    color: #fff;
+    border: 0px solid white;
+    border-bottom: 1px solid white;
+    padding: 7px;
+    margin-bottom: 20px;
+    outline-color: transparent !important;
+}
+.lockicon{
+    top: 45%;
+    right: 44%;
+    font-size: 20px;
+    color: #fff;
+}
+.inpsigndiv{
+    width: 50%;
+}
+.logsign{
+    color:gray;
+    border-bottom: 1px solid #fff;
+    width: 50%;
+}
+.leftlog{
+    border-right: 1px solid #fff;
+}
+.leftlog:hover,.rightsign:hover{
+    background-color: #fff;
+    color:#000;
+    cursor: pointer;
+}
+.inpsigndiv{
+    display: none;
+}
+@media screen and (max-width: 760px)
+{
+    .logicon{
+        padding: 10px 15px;
+        font-size: 20px;
+        background-color: #fff;
+        margin-bottom: 10px;
+    }
+    .nameino{
+        margin-bottom: 10px;
+    }
+    .log{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 440px)
+{
+    .logicon{
+        padding: 20px 25px;
+        font-size: 20px;
+        background-color: #fff;
+        margin-bottom: 10px;
+    }
+    .nameino{
+        margin-bottom: 10px;
+    }
+    .log{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 730px)
+{
+    .owl-nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 780px)
+{
+    .logwall{
+        width: 400px;
+    }
+    .inpsigndiv{
+        width:75%;
+    }
+}
+@media screen and (max-width: 414px)
+{
+    .logwall{
+        width: 300px;
+    }
+    .inpsigndiv{
+        width:75%;
+    }
+}
+/*login*/
+/*navbar*/
+.navlist{
+    padding: 0 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+}
+.mynav{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.searchinp2{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+}
+.searchinp2::placeholder{
+    padding-left:10px;
+    color: #fff;
+    font-size: 20px;
+}
+.searchicon{
+    top: 0;
+    right: 2%;
+    cursor: pointer;
+}
+.exitsearch{
+    cursor: pointer;
+}
+.upersearch{
+    display: none;
+}
+.searchbtn2{
+    cursor: pointer;
+}
+@media screen and (max-width: 780px)
+{
+    .firstnav{
+        display: none;
+    }
+}
+/*navbar*/
+/*slider*/
+.carousel{
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-control-prev, .carousel-control-next{
+    color: #000;
+    font-size: 40px;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover{
+    color: #000;
+}
+.carousel-control-prev,.carousel-control-next{
+    opacity: 1 !important;
+}
+/*slider*/
+/*footer*/
+.upfoot{
+    background-color: #444;
+    padding: 20px 0;
+}
+.footicon {
+    font-size: 50px;
+    margin-right: 20px;
+}
+.downfoot{
+    background-color: #222;
+}
+.socialicon{
+    font-size: 30px;
+    margin-right: 20px;
+}
+/*footer*/
+/*loading*/
+.screen{
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    display:flex;
+    z-index: 999999999999999999999;
+    overflow-y: hidden;
+}
+.loadingdesc{
+    overflow: hidden;
+    font-size: 85px;
+    position: relative;
+    height: 127px;
+}
+.desc1{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+}
+.desc2{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+}
+.desc3{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+}
+.description{
+    width:742px
+}
+@media screen and (max-width:750px){
+    .loadingdesc{
+        font-size: 45px;
+        height: 86px;
+    }
+    .screen{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/*loading*/
+/*cards*/
+.more{
+    font-size: 20px;
+}
+.cards{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 250px;
+}
+.cardimg{
+border-radius: 10px;
+}
+.cards img{
+    transition: all 1s;
+    width: 250px;
+}
+.cards:hover img{
+    transform: scale(1.1,1.1);
+}
+.eachcard{
+height: 80px;
+}
+@media screen and (max-width:750px){
+    .hidden{
+        display: none;
+    }
+    .cards{
+        height: 200px;
+    }
+}
+/*cards*/
+/*home*/
+.wallpaper{
+    height: 800px;
+    background-image: url(../images/section01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.standphone
+{
+    width: 212px;
+}
+.movephone
+{
+    width: 399px;
+}
+.secondphone{
+    top:35%;
+    right: 25%;
+    transform: rotate(0deg);
+    animation-name: anime;
+    animation-delay: 1.3s;
+	animation-duration: 2s;
+    animation-direction: alternate;
+    z-index: 1;
+}
+.firstphone{
+    top:40%;
+    right: 35%;
+    z-index: 0;
+}
+@keyframes anime
+{
+	0%{top:35%;right: 35%;transform: rotate(-20deg);}
+	100%{top:35%;right: 25%;transform: rotate(0deg);}
+}
+@media screen and (max-width:1366px){
+    .wallpaper{
+        height: 500px;
+    }
+    .standphone
+    {
+        width: 112px;
+    }
+    .movephone
+    {
+        width: 199px;
+    }
+    .secondphone{
+        top:35%;
+        right: 25%;
+    }
+    .firstphone{
+        top:50%;
+        right: 35%;
+    }
+}
+/*home*/
+
+/*separator*/
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+.owl-nav,.owl-dots{
+    display: none;
+}
+/*separator*/
+
+/*phones*/
+.selector
+{
+    width: 100%;
+}
+.mycont{
+    height: 100%;
+}
+.wallpapermen{
+    height: 844px;
+    background-image: url(../images/slide-03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.selectorwall{
+    height: 300px;
+    background-image: url(../images/shop-banner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mencatdiv{
+    background-color: #ebeeef;
+}
+.filter{
+    font-weight: bold;
+    cursor: pointer;
+}
+.dropdown{
+    display: none;
+    width: 200px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+}
+.filtername{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.hoverimg1{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.mylink1:hover > .hoverimg1{
+    opacity: 1;
+}
+.card:hover > .hoverimg{
+    opacity: 1;
+}
+.hearticon1{
+    right: 10%;
+}
+.hearticon{
+    position: absolute;
+    right: 20%;
+    top: 5%;
+    z-index: 1;
+    cursor: pointer;
+}
+.card{
+    border: none;
+}
+.foursquares, .onesquare{
+    cursor: pointer;
+}
+.other{
+    font-size: 20px;
+    font-weight: bold;
+}
+.test img{
+    transition: all 1s;
+}
+.test:hover > img{
+    transform: scale(1.1,1.1);
+}
+.checkout:hover{
+    color: black !important;
+}
+.selectorhead{
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+.clothesicon:hover{
+    text-decoration: none;
+}
+.gender:hover{
+    border-bottom: 1px solid red;
+}
+.filters{
+    display: flex;
+}
+.filter{
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 1031;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.colors{
+    width: 28px;
+    height: 28px;
+}
+.colors .right{
+    display: none;
+}
+.mobileimg{
+    width: 40% ;
+}
+@media screen and (max-width:1414px)
+{
+    .test img{
+        width: 75%;
+    }
+}
+@media screen and (max-width:414px)
+{
+    .categ{
+        display: none;
+    }
+}
+@media screen and (max-width:770px)
+{
+    .selector{
+        display: none;
+    }
+}
+@media screen and (min-width:415px)
+{
+    .filt{
+        display: none;
+    }
+}
+/*phones*/

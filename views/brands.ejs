@@ -1,0 +1,79 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+    <!--cards-->
+    <section>
+    <div class="container">
+        <h2 class="my-4">All Mobile Phone Brands</h2>
+        <hr>
+    <div class="row">
+    <% for( let index = 0; index < result.length; index++ ) { %>
+        <div class="col-md-3 col-6 rounded pb-4">
+            <a href="/brands/<%= result[index].name %>">
+            <div class="cards py-5 d-flex">
+                <div class="m-auto">
+                <img src="images/apple-logo-brand-iphone-8-png-favpng-kpjuE97YAJfvw2kincmpHbXii-removebg-preview1-removebg-preview.png" alt="" class="img-fluid cardimg">
+                </div>
+            </div>
+            </a>
+        </div>
+    <% } %>
+    <!--<div class="col-md-3 col-6 rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/dc36c1d02dfe2ec192b7ec6d2289cb2d-removebg-preview.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/Sony-LOGO-removebg-preview.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/Xiaomi-Logo-removebg-preview.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 hidden rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/Realme-realme-_logo_box-RGB-01.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 hidden rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/OPPO_Logo_wiki.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 hidden rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/HUAWEI-logo-removebg-preview.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 hidden rounded pb-4">
+        <div class="cards py-5 d-flex">
+        <div class="m-auto">
+            <img src="images/Nokia-Logo-removebg-preview.png" alt="" class="img-fluid cardimg">
+        </div>
+        </div>
+    </div>-->
+    </div>
+    <div class="">
+    <a class="btn btn-secondary text-white float-right more">View all brands</a>
+    </div>
+    </div>
+    </section>
+    <!--cards-->
+<%- include('end.ejs')%>

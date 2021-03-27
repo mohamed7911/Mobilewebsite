@@ -1,0 +1,232 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+<!--porducts-->
+<section class="products" id="product">
+  <div class="container">
+      <p class="heading">Clothes</p>
+      <div class="row px-4 py-3" style="background-color: #fff">
+          <div class="col-lg-2 categ border-right">
+              <p class="other">Other Categories</p>
+              <ul class="list-unstyled">
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Shoes</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Sports Bras</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Bodysuits</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Tops & T-Shirts</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Hoodies & Sweatshirts</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Jackets & Gilets</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Trousers & Tights</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Compression & Base Layer</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Tracksuits</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Jumpsuits & Rompers</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Skirts & Dresses</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Socks</a>
+                  </li>
+                  <li class="mb-2">
+                      <a href="#product" class="text-dark">Accessories & Equipment</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="col-lg-10 ">
+              <ul class="list-unstyled filters categ border-bottom">
+                  <li>
+                      <a class="nav-link dropdown-toggle text-dark navbarDropdown font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      SIZE
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">XS</a>
+                        <a class="dropdown-item" href="#">S</a>
+                        <a class="dropdown-item" href="#">M</a>
+                        <a class="dropdown-item" href="#">L</a>
+                        <a class="dropdown-item" href="#">XL</a>
+                        <a class="dropdown-item" href="#">XXL</a>
+                      </div>
+                  </li>
+                  <li>
+                      <a class="nav-link dropdown-toggle navbarDropdown text-dark font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      PRICE
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">EGP 495.00-EGP 500.00</a>
+                        <a class="dropdown-item" href="#">EGP 645.00-EGP 650.00</a>
+                        <a class="dropdown-item" href="#">EGP 745.00-EGP 750.00</a>
+                        <a class="dropdown-item" href="#">EGP 895.00-EGP 900.00</a>
+                        <a class="dropdown-item" href="#">EGP 995.00-EGP 1000.00</a>
+                      </div>
+                  </li>
+                  <li>
+                      <a class="nav-link dropdown-toggle navbarDropdown text-dark font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          COLOR
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-square border text-white mr-3"></i> white</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-square text-dark mr-3"></i> baclk</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-square text-secondary mr-3"></i> gray</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-square text-info mr-3"></i> blue</a>
+                      </div>
+                  </li>
+                  <li>
+                      <a class="nav-link dropdown-toggle navbarDropdown text-dark font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          CONCEPT
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Denim</a>
+                        <a class="dropdown-item" href="#">Divided</a>
+                      </div>
+                  </li>
+                  <li class="ml-auto">
+                    <%=result.length%> items
+                  </li>
+                  <li class="mx-3 onesquare">
+                      <i class="fas fa-square"></i>
+                  </li>
+                  <li class="mr-3 foursquares">
+                      <i class="fas fa-th-large"></i>
+                  </li>
+              </ul>
+              <p class="text-center pb-3 filt">Filters <i class="fas fil fa-filter"></i></p>
+              <div class="row">
+                <% for( var index = 0; index < result.length; index++ ) { %>
+                  <div class="col-lg-3 resizediv">
+                      <div class="card mx-auto mb-5 text-center" style="width: 18rem;">
+                          <i class="fas fa-heart hearticon hearticon1"></i>
+                          <a href="" class="hoverimg"><img class="img-fluid mobileimg" src="../<%=result[index].imgurl%>"></a>
+                          <div class="card-body">
+                            <a class="btn btn-info text-white" href="/edit/<%= result[index].id %> ">edit</a>
+                            <a class="btn btn-danger text-white" href="/delete/<%= result[index].id %> ">delete</a>
+                          </div>
+                      </div>
+                  </div>
+                <% } %>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="filter">
+  <div class="container">
+      <div class="d-flex p-3">
+          <i class="fas fa-2x fa-times filexit ml-auto"></i>
+      </div>
+      <p class="heading">Filter</p>
+      <div class="">
+          <p>Sort By</p>
+          <ul class="list-unstyled pl-3">
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">XS</label>
+              </li>
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">S</label>
+              </li>
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">M</label>
+              </li>
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">L</label>
+              </li>
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">XL</label>
+              </li>
+              <li>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">XXL</label>
+              </li>
+          </ul>
+      </div>
+      <hr>
+      <div class="">
+          <p>Price</p>
+          <ul class="list-unstyled pl-3">
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">EGP 495.00-EGP 500.00</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">EGP 645.00-EGP 650.00</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">EGP 745.00-EGP 750.00</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">EGP 895.00-EGP 900.00</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">EGP 995.00-EGP 1000.00</label>
+              </li>
+          </ul>
+      </div>
+      <hr>
+      <div class="">
+          <p>Color</p>
+          <ul class="list-unstyled pl-3 d-flex">
+              <li class="pr-4">
+                  <div class="colors rounded-circle bg-wite border mx-auto d-flex"><i class="fas fa-check right m-auto"></i></div>
+                  <label for="other">White</label>
+              </li>
+              <li class="pr-4">
+                  <div class="colors rounded-circle bg-dark border mx-auto d-flex"><i class="fas fa-check text-white right m-auto"></i></div>
+                  <label for="other">Black</label>
+              </li>
+              <li class="pr-4">
+                  <div class="colors rounded-circle bg-secoundry border mx-auto d-flex" style="background-color: gray;"><i class="fas fa-check text-white right m-auto"></i></div>
+                  <label for="other">Gray</label>
+              </li>
+              <li class="pr-4">
+                  <div class="colors rounded-circle  mx-auto d-flex" style="background-color: #17a2b8;"><i class="fas fa-check text-white right m-auto"></i></div>
+                  <label for="other">Blue</label>
+              </li>
+          </ul>
+      </div>
+      <hr>
+      <div class="">
+          <p>Concept</p>
+          <ul class="list-unstyled pl-3">
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">Denim</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="other" name="gender" value="other">
+                  <label for="other">Divided</label>
+              </li>
+          </ul>
+      </div>
+      <hr>
+  </div>
+</div>
+<!--porducts-->
+<%- include('end.ejs')%>

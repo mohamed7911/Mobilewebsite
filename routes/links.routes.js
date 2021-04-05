@@ -59,7 +59,6 @@ appRoutes.get('/add-brand',async(req,res)=>{
 appRoutes.post('/add-brand',async(req,res)=>{
     const {name}=req.body;
     await brandsApp.insertMany({name,imgurl:req.file.path});
-    console.log(imgurl);
     res.redirect("/");
 });
 module.exports=appRoutes;

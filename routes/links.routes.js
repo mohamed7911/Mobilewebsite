@@ -10,6 +10,24 @@ appRoutes.get('/',async(req,res)=>{
     console.log(arr);
     res.render('index',{arr});
 });
+appRoutes.get('/tes',async(req,res)=>{
+    const fetch = require('node-fetch');
+    const response = await fetch(
+        'https://parseapi.back4app.com/classes/Cellphonedataset_Cell_Phone_Models_By_Brand?order=Cell_Phone_Brand',
+        {
+        headers: {
+            'X-Parse-Application-Id': 'ioxTo1mojEgkENBBRPxJmG5TtbJ1G8Fg0t6HU7Qg', // This is your app's application id
+            'X-Parse-REST-API-Key': 'J0cuVA3b0KaGREuUS4iwF5RsHVZ5eJSKqMQJDiRU', // This is your app's REST API key
+        }
+        }
+    );
+    const data = await response.json(); // Here you have the data that you need
+    //console.log(JSON.stringify(data, null, 2));
+    var tata=[];
+    for(i=0;i<data.results.length;i++)
+    tata.push(data.results[i].Cell_Phone_Brand);
+    res.json(tata);
+});
 appRoutes.get('/brands',async(req,res)=>{
     const result= await brandsApp.find({});
     res.render('brands',{result});

@@ -484,25 +484,59 @@ height: 80px;
 {
     width: 399px;
 }
-.secondphone{
-    top:35%;
-    right: 25%;
-    transform: rotate(0deg);
-    animation-name: anime;
-    animation-delay: 1.3s;
-	animation-duration: 2s;
-    animation-direction: alternate;
-    z-index: 1;
+.movephone3
+{
+    width: 310px;
 }
 .firstphone{
     top:40%;
     right: 35%;
     z-index: 0;
 }
-@keyframes anime
+.secondphone{
+    top:30%;
+    right: 30%;
+    transform: rotate(0deg);
+    animation-name: anime1;
+    animation-delay: 1.3s;
+	animation-duration: 2s;
+    animation-direction: alternate;
+    z-index: 3;
+}
+@keyframes anime1
 {
 	0%{top:35%;right: 35%;transform: rotate(-20deg);}
-	100%{top:35%;right: 25%;transform: rotate(0deg);}
+	100%{top:30%;right: 30%;transform: rotate(0deg);}
+}
+.thirdphone{
+    top:20%;
+    right: 20%;
+    transform: rotate(0deg);
+    animation-name: anime2;
+    animation-delay: 1.3s;
+	animation-duration: 2s;
+    animation-direction: alternate;
+    z-index: 2;
+}
+@keyframes anime2
+{
+	0%{top:25%;right: 25%;transform: rotate(-20deg);}
+	100%{top:20%;right: 20%;transform: rotate(0deg);}
+}
+.forthphone{
+    top:20%;
+    right: 10%;
+    transform: rotate(0deg);
+    animation-name: anime3;
+    animation-delay: 1.3s;
+	animation-duration: 2s;
+    animation-direction: alternate;
+    z-index: 1;
+}
+@keyframes anime3
+{
+	0%{top:25%;right: 15%;transform: rotate(-20deg);}
+	100%{top:20%;right: 10%;transform: rotate(0deg);}
 }
 @media screen and (max-width:1366px){
     .wallpaper{
@@ -517,13 +551,14 @@ height: 80px;
         width: 199px;
     }
     .secondphone{
-        top:35%;
-        right: 25%;
+        top:30%;
+        right: 30%;
     }
     .firstphone{
         top:50%;
         right: 35%;
     }
+    .forthphone,.thirdphone{display: none;}
 }
 /*home*/
 
@@ -691,3 +726,51 @@ height: 80px;
     }
 }
 /*phones*/
+/*contact*/
+.contacthead{
+    font-size: 20px;
+    font-weight: 500 !important;
+}
+.contactstore{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.contactadress{
+    color: #808080;
+}
+.contactinp{
+    background-color: #ebeeef;
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 400 !important;
+    margin: 5px 0px;
+    padding: 12px 20px 11px 20px;
+    outline: 0;
+}
+.label{
+    margin-left: auto;
+}
+.contacttextarea{
+    height: 150px;
+}
+.contactBody{
+    background-color: #fff;
+}
+.contactBg{
+    background-color: #f3f2f0;
+    background-image: linear-gradient(#fff,#f3f2f0);
+    height: 65vh;
+}
+.heading{
+    font-size: 40px;
+    color: #BDAB98;
+    font-weight: bold;
+}
+@media screen and (max-width: 770px)
+{
+    .label{
+        margin-left: 0;
+    }
+}   
+/*contact*/

@@ -7,7 +7,6 @@ appRoutes.get('/',async(req,res)=>{
     for(i=0;i<8;i++){
         arr[i]=result[i];
     }
-    console.log(arr);
     res.render('index',{arr});
 });
 appRoutes.get('/tes',async(req,res)=>{
@@ -29,7 +28,8 @@ appRoutes.get('/tes',async(req,res)=>{
     res.json(tata);
 });
 appRoutes.get('/brands',async(req,res)=>{
-    const result= await brandsApp.find({});
+    const result2= await brandsApp.find({});
+    const result=result2.sort(dynamicSort("name"));
     res.render('brands',{result});
 });
 appRoutes.get('/add-employee',async(req,res)=>{
@@ -38,7 +38,6 @@ appRoutes.get('/add-employee',async(req,res)=>{
 });
 appRoutes.post('/add-employee',async(req,res)=>{
     const {name,brand,desc}=req.body;
-    console.log(brand); 
     await modelApp.insertMany({name,brand,desc,imgurl:req.file.path});
     res.redirect('/');
 });
@@ -79,4 +78,23 @@ appRoutes.post('/add-brand',async(req,res)=>{
     await brandsApp.insertMany({name,imgurl:req.file.path});
     res.redirect("/");
 });
+appRoutes.get('/Contact',async(req,res)=>{
+    res.render('Contact');
+});
+function dynamicSort(property) {
+    var sortOrder = 1;
+
+    if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+
+    return function (a,b) {
+        if(sortOrder == -1){
+            return b[property].localeCompare(a[property]);
+        }else{
+            return a[property].localeCompare(b[property]);
+        }        
+    }
+}
 module.exports=appRoutes;

@@ -97,7 +97,7 @@ $(".desc1").animate({top:"0%"},700)
 $(".desc2").delay(200).animate({top:"0%"},700)
 $(".desc3").delay(300).animate({top:"0%"},700)
 $(".screen").delay(1000).slideUp(800)
-$(".searchbtn").click(function(){
+$(".searchbtn2").click(function(){
     $(".downsearch").css("display","none");
     $(".upersearch").css("display","flex");
 })
@@ -156,4 +156,128 @@ $(".fil").click(function(){
 })
 $(".filexit").click(function(){
     $(".filter").animate({top:"100%"},500)
+})
+
+$(".proimg").click(function(){
+    $(".productimg").css("backgroundImage",'url("file:///E:/Questions/BeGroup/cloth%20shopping/'+$(this).attr('src')+'")');
+})
+
+$(".prodrop").click(function(){
+    $(this).parent().find("ul").slideToggle();
+    $(this).parent().siblings().find("ul").slideUp();
+})
+$(".star").click(function(){
+    for(i=1;i<=$(this).attr("id").slice($(this).attr("id").length-1,$(this).attr("id").length);i++)
+        $("#star"+i).addClass("text-warning")
+    for(i=$(this).attr("id").length;i>$(this).attr("id").slice($(this).attr("id").length-1,$(this).attr("id").length);i--)
+        $("#star"+i).removeClass("text-warning")
+})
+// noUiSlider.create(slider, {
+//     start: [2000, 2015],
+//     connect: true,
+//     step:1,
+//     range: {
+//         'min': 1999,
+//         'max': 2021
+//     }
+// });
+// $(".noUi-handle-lower").mouseup(function() {
+//     console.log($(".noUi-handle-lower").attr("aria-valuetext"));
+// })
+// $(".noUi-handle-lower").on("change",function(){
+//     console.log("fasa");
+//   });
+  var slider = document.getElementById('range');
+
+  noUiSlider.create(slider, {
+      start: [ 2000,2015 ], // Handle start position
+      connect: true,
+      margin:1,
+      step: 1, // Slider moves in increments of '10'
+      range: { // Slider can select '0' to '100'
+          'min': 1999,
+          'max': 2021
+      }
+  });
+
+  var minCostInput = document.getElementById('minCost'),
+      maxCostInput = document.getElementById('maxCost');
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on('update', function( values, handle ) {
+      if ( handle ) {
+          maxCostInput.value = values[handle].split(".")[0];
+          $(".max").text( values[handle].split(".")[0]);
+      } else {
+          minCostInput.value = values[handle].split(".")[0];
+          $(".min").text( values[handle].split(".")[0]);
+      }
+  });
+
+  minCostInput.addEventListener('change', function(){
+      slider.noUiSlider.set([null, this.value]);
+  });
+
+  maxCostInput.addEventListener('change', function(){
+      slider.noUiSlider.set([null, this.value]);
+  });
+  var slider = document.getElementById('range2');
+
+  noUiSlider.create(slider, {
+      start: [ 6000,15000 ], // Handle start position
+      connect: true,
+      margin:1000,
+      step: 1000, // Slider moves in increments of '10'
+      range: { // Slider can select '0' to '100'
+          'min': 1000,
+          'max': 30000
+      }
+  });
+  var minCostInput2 = document.getElementById('minCost2'),
+      maxCostInput2 = document.getElementById('maxCost2');
+
+  // When the slider value changes, update the input and span
+  slider.noUiSlider.on('update', function( values, handle ) {
+      if ( handle ) {
+          maxCostInput2.value = values[handle].split(".")[0];
+          $(".max2").text( values[handle].split(".")[0]);
+      } else {
+          minCostInput2.value = values[handle].split(".")[0];
+          $(".min2").text( values[handle].split(".")[0]);
+      }
+  });
+
+  minCostInput2.addEventListener('change', function(){
+      slider.noUiSlider.set([null, this.value]);
+  });
+
+  maxCostInput2.addEventListener('change', function(){
+      slider.noUiSlider.set([null, this.value]);
+  });
+
+var mobile=500;
+console.log(mobile);
+$(document).on("mousewheel", function() {
+    // console.log("window = "+$(window).scrollTop());
+    // console.log(mobile);
+    // if($(window).scrollTop()>=$('.handimg').offset().top-300){
+    //     $(".handimg").fadeIn({ duration: 1000, queue: true });
+    //     $(".handimg").animate({marginLeft:'0%'},{ duration: 2000, queue: false });
+    // }
+    // else{
+    //     $(".handimg").fadeOut({ duration: 1000, queue: true });
+    //     $(".handimg").animate({marginLeft:'-120%'},{ duration: 2000, queue: false });
+    // }
+    if($(window).scrollTop()>=mobile){
+        $(".searchMob").animate({top:'0%'},2000);
+    }
+    else{
+    }
+});
+$(".brandOption").click(function () {
+    $(".brandDd").val($(this).text())
+    $(this).css("background-color","#3FB8AF")
+    $(this).css("color","#fff")
+    $(this).siblings().css("background-color","#fff")
+    $(this).siblings().css("color","#000")
 })

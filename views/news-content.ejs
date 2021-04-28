@@ -1,0 +1,30 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+    <section>
+       <div class="container">
+           <div class="newsDiv">
+                <div class="background">
+                    <div class="overlay d-flex">
+                        <div class="m-auto px-5">
+                            <h3 class="newsTitle"><%= result[0]["title"] %></h3>   
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="row bg-white mx-0 py-4 justify-content-center">
+               <div class="col-md-7 pt-5 d-flex">
+                   <div class="">
+                        <p><%= result[0]["desc"] %></p>
+                        <p><%= result[0]["date"] %></p>
+                   </div>
+               </div>
+               <div class="col-md-3 px-0 text-center">
+                <img src="../<%= result[0]["imgurl"] %>" class="newsImg" alt="">
+               </div>
+           </div>
+       </div>
+    </section>
+<%- include('end.ejs')%>

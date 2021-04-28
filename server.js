@@ -13,7 +13,7 @@ var storage = multer.diskStorage({
     cb(null,Date.now()+'-'+file.originalname)
     }
 })
-app.use(multer({dest:'images',storage:storage}).single('img'))
+app.use(multer({dest:'images',storage:storage}).array('img',2))
 app.use(bodyparser);
 app.use(appRoutes);
 app.set('view engine','ejs');

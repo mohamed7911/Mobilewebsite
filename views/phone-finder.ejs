@@ -1,0 +1,54 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-sm-1 col-3">
+                        <spam class="min">min</spam>
+                      </div>
+                      <div class="mobileView col-sm-1 col-2 ml-auto">
+                        <spam class="max">max</spam>
+                      </div>
+                      <div class="col-md-10">
+                        <div class="sliderCont">
+                          <div id="range"></div>
+                        </div>
+                        <div class="formCost form-inline">
+                            <input class="form-control d-none" name="minYear" type="text" id="minCost" value="0"/><input class="form-control d-none"  name="maxYear" type="text" id="maxCost" value="1000"/>
+                        </div>
+                      </div>
+                      <div class="col-1 desktopView">
+                        <spam class="max">max</spam>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-sm-1 col-3">
+                        <spam class="min">min</spam>
+                      </div>
+                      <div class="mobileView col-sm-1 col-2 ml-auto">
+                        <spam class="max">max</spam>
+                      </div>
+                      <div class="col-md-10">
+                        <div class="sliderCont">
+                          <div id="range"></div>
+                        </div>
+                        <div class="formCost form-inline">
+                            <input class="form-control d-none" name="minYear" type="text" id="minCost" value="0"/><input class="form-control d-none"  name="maxYear" type="text" id="maxCost" value="1000"/>
+                        </div>
+                      </div>
+                      <div class="col-1 desktopView">
+                        <spam class="max">max</spam>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include('end.ejs')%>

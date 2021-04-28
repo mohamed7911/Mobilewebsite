@@ -30,7 +30,107 @@
       </div>
   </section>
   <!--home-->
-  <h3 class="separator my-5 py-5">News</h3>
+  <h3 class="separator my-5 py-5">Phone finder</h3>
+  <!--Phone finder-->
+  <section class="phone-finder pb-5">
+    <div class="container">
+      <form  action="/minPhone-finder" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-8">
+              <div class="my-3">
+                <div class="row">
+                  <div class="col-sm-1 col-3">
+                    <spam class="min">min</spam>
+                  </div>
+                  <div class="mobileView col-sm-1 col-2 ml-auto">
+                    <spam class="max">max</spam>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="sliderCont">
+                      <div id="range"></div>
+                    </div>
+                    <div class="formCost form-inline">
+                        <input class="form-control d-none" name="minYear" type="text" id="minCost" value="0"/><input class="form-control d-none"  name="maxYear" type="text" id="maxCost" value="1000"/>
+                    </div>
+                  </div>
+                  <div class="col-1 desktopView">
+                    <spam class="max">max</spam>
+                  </div>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="row">
+                  <div class="col-sm-1 col-3">
+                    <spam class="min2">min</spam>
+                  </div>
+                  <div class="mobileView col-sm-1 col-2 ml-auto">
+                    <spam class="max2">max</spam>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="sliderCont">
+                      <div id="range2"></div>
+                    </div>
+                    <div class="formCost form-inline">
+                        <input class="form-control d-none" name="minCost" type="text" id="minCost2" value="0"/><input class="form-control d-none" name="maxCost" type="text" id="maxCost2" value="1000"/>
+                    </div>
+                  </div>
+                  <div class="col-1 desktopView">
+                    <spam class="max2">max</spam>
+                  </div>
+                </div>
+              </div>
+              <select class="form-control" name="OS" id="exampleFormControlSelect1">
+                <% for( let i = 0; i < OSArr.length; i++ ) { %>
+                  <option><%=OSArr[i]%></option>
+                <% } %>
+              </select>
+              <div class="row mt-5">
+                <div class="neonBtn my-2 col-md-6">
+                  <button class="border-0" type="submit">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div>Search</div>
+                  </button>
+                </div>
+                <div class="neonBtn my-2 text-center col-md-6">
+                  <a href="#google.com">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div>Advanced</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="brandScroll text-center">
+                <% for( let i = 0; i < result.length; i++ ) { %>
+                  <p class="brandOption py-3" style="margin: 0;cursor: pointer;"><%= result[i].name %></p>
+                  <hr style="margin: 0;">
+                <% } %>
+              </div>
+              <input type="text" value="Apple" class="brandDd d-none" name="brand">
+            </div>
+            <div class="col-md-2">
+              <div class="mx-auto">
+                <div class="searchMob">
+                  <div class="mobPos">
+                    <img src="../images/phone-placeholder.png" class="" alt="" width="150px">
+                    <div class="d-flex finderSearch"><img src="../images/image0.png "  width="130px"class="mx-auto" alt=""></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <button type="submit" class="btn" style="background-color: #3FB8AF; color: #fff;">search</button> -->
+        </div>
+    </form>
+    </div>
+  </section>
+  <!--Phone finder-->
+  <h3 class="separator">News</h3>
   <!--slider-->
   <section class="my-5 pb-5">
     <div id="carouselExampleIndicators" class="w-100 carousel slide container" data-ride="carousel">
@@ -142,7 +242,15 @@
       </div>-->
     </div>
     <div class="">
-      <a href="/brands" class="btn btn-secondary text-white float-right more">View all brands</a>
+      <div class="neonBtn my-2 text-center">
+        <a href="/brands">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>View all brands</div>
+        </a>
+      </div>
     </div>
   </div>
   </section>

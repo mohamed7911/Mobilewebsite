@@ -333,11 +333,13 @@
     font-size: 20px;
 }
 .searchicon{
-    top: 0;
+    bottom:0%;
     right: 2%;
     cursor: pointer;
+    background-color: transparent;
 }
 .exitsearch{
+    font-size: 20px;
     cursor: pointer;
 }
 .upersearch{
@@ -571,13 +573,22 @@ height: 80px;
 .separator::before, .separator::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid #000;
 }
 .separator::before {
-    margin-right: .25em;
+    content: "";
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
+    background: linear-gradient(to right, rgba(240, 240, 240, 0), #000);
+    margin-right: 2vh;
 }
 .separator::after {
-    margin-left: .25em;
+    content: "";
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
+    background: linear-gradient(to left, rgba(240, 240, 240, 0), #000);
+    margin-left: 2vh;
 }
 .owl-nav,.owl-dots{
     display: none;
@@ -774,3 +785,308 @@ height: 80px;
     }
 }   
 /*contact*/
+
+/*product*/
+.product{
+    padding: 70px 0 50px 0;
+}
+.holepr{
+    padding:30px;
+    background-color: #fff;
+}
+.size{
+    border: 1px solid #E8E8E8;
+    cursor: pointer;
+}
+.size:hover{
+    border-color:#222;
+}
+.proimg{
+    width: 25%;
+    cursor: pointer;
+}
+.prodrop{
+    cursor: pointer;
+}
+.prolist{
+    display: none;
+}
+.star{
+    color: #E8E8E8;
+    cursor: pointer;
+}
+.specialstar{
+    color: #E8E8E8;
+}
+.pronav{
+    background-color: #222 !important;
+}
+.commentlogo{
+    width: 70px;
+    height: 70px;
+}
+.sticky{
+    position: sticky;
+    top: 80px;
+}
+/*product*/
+/*phone finder*/
+.brandScroll{
+    height:26vh ;   
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.brandScroll::-webkit-scrollbar {
+  width:7px;
+}
+
+/* Track */
+.brandScroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+.brandScroll::-webkit-scrollbar-thumb {
+  background: #3FB8AF; 
+  border-radius: 10px;
+}
+.finderSearch{
+    color: #3FB8AF;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.finderSearch:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    text-decoration: none;
+    color: #3FB8AF;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.searchMob{
+    position: absolute;
+    top: 150%;
+}
+.phone-finder{
+    overflow: hidden;
+}
+.mobPos{
+    position: relative;
+}
+
+@media screen and (max-width: 760px)
+{
+    .desktopView{
+        display: none;
+    }
+    .mobileView{
+        display: auto;
+    }
+    .searchMob{
+        display: none;
+    }
+}
+@media screen and (min-width: 760px)
+{
+    .desktopView{
+        display: auto;
+    }
+    .mobileView{
+        display: none;
+    }
+}
+/*phone finder*/
+
+/*neon btn*/
+.neonBtn button {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.neonBtn button:hover {
+    color: #ffffff;
+    background: #3FB8AF;
+    box-shadow: 0 0 10px #3FB8AF, 0 0 20px #3FB8AF, 0 0 40px #3FB8AF;
+    transition-delay: 1s;
+}
+.neonBtn button span {
+    position: absolute;
+    display: block;
+}
+.neonBtn button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3FB8AF);
+}
+.neonBtn button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+.neonBtn button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #3FB8AF);
+}
+.neonBtn button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.neonBtn button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #3FB8AF);
+}
+.neonBtn button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.neonBtn button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #3FB8AF);
+}
+.neonBtn button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.neonBtn a {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    width: 100%;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.neonBtn a:hover {
+    color: #ffffff;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
+    transition-delay: 1s;
+}
+.neonBtn a span {
+    position: absolute;
+    display: block;
+}
+.neonBtn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+.neonBtn a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+.neonBtn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+.neonBtn a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.neonBtn a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+.neonBtn a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.neonBtn a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+.neonBtn a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*neon btn*/
+/* news */
+.newsImg{
+}
+.background{
+    background-image: url(../../images/9c912c6125bfe08fed6c0d08b3430011.jpg);
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.newsTitle{
+    color: #fff;
+    z-index: 1;
+}
+.newsDiv{
+    overflow: hidden;
+    border-radius: 5px;
+}
+.allNewsTitle{
+    color: #000;
+}
+.allNewsTitle:hover{
+    color: #000;
+}
+/* news */

@@ -1,0 +1,252 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+<!--porducts-->
+<section class="product">
+    <div class="container">
+        <div class="row holepr rounded">
+            <div class="col-lg-5 position-relative">
+                <div class="sticky">
+                    <img src="../images/1611868773581-item_XXL_131938441_cf423527d7ef9.jpg" class="d-block w-100 p-5" alt="...">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="">
+                    <div class="d-flex">
+                            <p class="font-weight-bold"><%=results['Brand']%> <%=results['Model'].replace("_","")%></p>
+                            <p class="font-weight-bold ml-auto">999.99 EGP</p>
+                        </div>
+                    <div class="d-flex">
+                        <img class="img-fluid px-1 proimg" src="images/man2.jpg" id="proimg1" alt="">
+                        <img class="img-fluid px-1 proimg" src="images/man4.jpg" id="proimg2" alt="">
+                        <img class="img-fluid px-1 proimg" src="images/man6.jpg" id="proimg3" alt="">
+                        <img class="img-fluid px-1 proimg" src="images/man8.jpg" id="proimg4" alt="">
+                    </div>
+                    <button class="btn btn-dark w-100 mt-3">Add to Cart</button>
+                    <button class="btn btn-outline-dark w-100 my-3">Add to Wishlist</button>
+                    <p>
+                        <% for( let i = 0; i < resultsKeys.length; i++ ) { %>
+                            <span><%= resultsKeys[i] %> : <%= results[resultsKeys[i].replace(" ","_")].replace("_","").replace("�","")  %> ,</span>
+                        <% } %>
+                    </p>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">Network</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Technology :  <%= results["Network"]  %></li>
+                            <li>Network Speed :  <%= results["Network_Speed"]  %></li>
+                            <li>2G :  <%= results["TwoG"]  %></li>
+                            <li>3G :  <%= results["ThreeG"]  %></li>
+                            <li>4G :  <%= results["FourG"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">Launch</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Announced :  <%= results["Announced"]  %></li>
+                            <li>Status  :  <%= results["Status"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">BODY</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Dimensions :  <%= results["Dimensions"]  %></li>
+                            <li>SIM :  <%= results["SIM"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">DISPLAY</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Type :  <%= results["Display_type"]  %></li>
+                            <li>Size :  <%= results["Display_size"]  %></li>
+                            <li>Resolution :  <%= results["Display_resolution"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">PLATFORM</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>OS :  <%= results["Operating_System"]  %></li>
+                            <li>Chipset :  <%= results["Chipset"]  %></li>
+                            <li>CPU :  <%= results["CPU"]  %></li>
+                            <li>GPU :  <%= results["GPU"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">MEMORY</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Card slot :  <%= results["Memory_card"]  %></li>
+                            <li>Internal :  <%= results["Internal_memory"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">MAIN CAMERA</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Camera :  <%= results["Primary_camera"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">SELFIE CAMERA</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Camera :  <%= results["Secondary_camera"].replace("�","")  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">SOUND</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Loudspeaker :  <%= results["Loud_speaker"]  %></li>
+                            <li>Audio jack :  <%= results["Audio_jack"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">COMMS</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>WLAN :  <%= results["WLAN"]  %></li>
+                            <li>Bluetooth :  <%= results["Bluetooth"]  %></li>
+                            <li>GPS :  <%= results["GPS"]  %></li>
+                            <li>NFC :  <%= results["NFC"]  %></li>
+                            <li>Radio :  <%= results["Radio"]  %></li>
+                            <li>USB :  <%= results["USB"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">FEATURES</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Sensors :  <%= results["Sensors"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">BATTERY</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Type :  <%= results["Battery"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="px-4">
+                        <div class="d-flex prodrop">
+                            <p class="mb-0">MISC</p>
+                            <i class="fas fa-angle-down ml-auto"></i>
+                        </div>
+                        <ul class="prolist pt-3">
+                            <li>Colors :  <%= results["Colors"]  %></li>
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <p class="heading">Reivews</p>
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="text-white px-2 py-2 m-auto commentlogo text-center fa-2x rounded-circle bg-dark">M</div>
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Michel Scott</p>
+                        <div class="">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star specialstar"></i>
+                            . a month ago
+                        </div>
+                        <p>I fell in love with the Trina dress as soon as I saw it being unpacked in the store! It fitted perfectly so I purchased it immediately and wore it the following night. It is a beautifully made dress and I love wearing it!</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="text-white px-2 py-2 m-auto commentlogo text-center fa-2x rounded-circle bg-dark">M</div>
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Michel Scott</p>
+                        <div class="">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star specialstar"></i>
+                            . a month ago
+                        </div>
+                        <p>I fell in love with the Trina dress as soon as I saw it being unpacked in the store! It fitted perfectly so I purchased it immediately and wore it the following night. It is a beautifully made dress and I love wearing it!</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="text-white px-2 py-2 m-auto commentlogo text-center fa-2x rounded-circle bg-dark">M</div>
+                    </div>
+                    <div class="col-lg-10">
+                        <p>Michel Scott</p>
+                        <div class="">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star specialstar"></i>
+                            . a month ago
+                        </div>
+                        <p>I fell in love with the Trina dress as soon as I saw it being unpacked in the store! It fitted perfectly so I purchased it immediately and wore it the following night. It is a beautifully made dress and I love wearing it!</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+<!--porducts-->
+<%- include('end.ejs')%>

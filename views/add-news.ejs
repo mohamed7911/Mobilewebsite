@@ -1,0 +1,31 @@
+<%- include('head.ejs')%>
+<body>
+    <%- include('navbar.ejs')%>
+    <div class="container">
+      <form action="/add-news" method="POST" enctype="multipart/form-data">
+        <div class="row mt-5" >
+
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <input name="title" type="text" class="form-control" placeholder="title">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <input name="img" multiple type="file" class="form-control" id="inputimg" placeholder="Image">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <textarea name="desc" class="form-control" id="inputEmail" placeholder="desc"></textarea>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group  ">
+                <input name="date" type="date" class="form-control" id="inputEmail" placeholder="date">
+            </div>
+        </div>
+        <button class="btn btn-primary w-100">Submit</button>    
+    </form>
+    </div>
+<%- include('end.ejs')%>

@@ -1,0 +1,29 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+<!--compare-->
+<section class="compare">
+    <div class="container">
+        <form class="compSearch" action="/compare" method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <input name="name" class="w-100" value="<%=result.title%>" placeholder="Search">
+                    <img src="../images/Phones/<%=result.img%>.<%=result.img.split(".")[1]%>" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-4">
+                    <input name="name1" class="w-100" value="<%=result1.title%>" placeholder="Search">
+                    <img src="../images/Phones/<%=result1.img%>.<%=result1.img.split(".")[1]%>" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-4">
+                    <input name="name2" class="w-100" value="<%=result2.title%>" placeholder="Search">
+                    <button class="btn btn-dark searchbtn text-white" type="submit"><i class="fas fa-search"></i></button>
+                    <img src="../images/Phones/<%=result2.img%>.<%=result2.img.split(".")[1]%>" class="img-fluid" alt="">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!--compare-->
+<%- include('end.ejs')%>

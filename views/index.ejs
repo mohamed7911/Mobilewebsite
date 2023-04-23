@@ -16,16 +16,16 @@
           <%- include('F-navbar.ejs')%>
         </div>
         <div class="position-absolute secondphone">
-          <img src="images/section01-02.png" class="standphone" alt="">
+          <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/section01-02.png" class="standphone" alt="">
         </div>
         <div class="position-absolute firstphone">
-          <img src="images/section01-01.png" class="movephone" alt="">
+          <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/section01-01.png" class="movephone" alt="">
         </div>
         <div class="position-absolute thirdphone">
-          <img src="images/section01-03.png" class="movephone3" alt="">
+          <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/section01-03.png" class="movephone3" alt="">
         </div>
         <div class="position-absolute forthphone">
-          <img src="images/section04.png" class="movephone" alt="">
+          <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/section04.png" class="movephone" alt="">
         </div>
       </div>
   </section>
@@ -118,8 +118,8 @@
               <div class="mx-auto">
                 <div class="searchMob">
                   <div class="mobPos">
-                    <img src="../images/phone-placeholder.png" class="" alt="" width="150px">
-                    <div class="d-flex finderSearch"><img src="../images/image0.png "  width="130px"class="mx-auto" alt=""></i></div>
+                    <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/phone-placeholder.png" class="" alt="" width="150px">
+                    <div class="d-flex finderSearch"><img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/image0.png "  width="130px"class="mx-auto" alt=""></i></div>
                   </div>
                 </div>
               </div>
@@ -141,21 +141,21 @@
         </ol>
         <div class="carousel-inner w-100">
           <div class="carousel-item active">
-            <img class="" src="images/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp" alt="First slide">
+            <img class="" src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>...</h5>
               <p>...</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp"  alt="...">
+            <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp"  alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>...</h5>
               <p>...</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp"  alt="...">
+            <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/main_kv_galaxy_note20_combo_non5g_1440x640_pc_02.webp"  alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>...</h5>
               <p>...</p>
@@ -184,7 +184,7 @@
             <a href="/brands/<%= arr[index].name %>">
               <div class="cards py-5 d-flex">
                 <div class="m-auto">
-                  <img src="<%= arr[index].imgurl %>" alt="" class="img-fluid cardimg">
+                  <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633726079/images/Brands/<%= arr[index].imgurl %>" alt="" class="img-fluid cardimg">
                 </div>
               </div>
             </a>
@@ -285,69 +285,17 @@
   <section class="">
     <div class="container">
       <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <% for( let i = 0; i < topData.length; i++ ) { %>
+          <div class="item">
+            <div class="card">
+              <img src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633754817/images/Phones/<%=topData[i].img%>.<%=topData[i].img.split(".")[1]%>" class="card-img-top w-50 mx-auto mt-4" alt="...">
+              <div class="card-body">
+                <h5 class=""><%=topData[i].title%></h5>
+                <p class="card-text"></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card">
-            <img src="images/A50_600x600.png" class="card-img-top w-25 mx-auto mt-4" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
+        <% } %>
       </div>
     </div>
   </section>

@@ -1,3 +1,80 @@
+var posts="";
+getPosts()
+let checkedBrand=[]
+let mobsArray=[]
+$('#pagination-demo').twbsPagination({
+    totalPages: 6,
+    visiblePages: 4,
+    next: 'Next',
+    prev: 'Prev',
+    onPageClick: function(event, page) {
+        //fetch content and render here
+        window.open("http://localhost:3000/phones/"+page).focus();
+
+    }
+});
+$(".hiddenList").each(function( index ) {
+    mobsArray.push(`<div class="col-lg-3 resizediv">`+$(this).html()+`</div>`)
+});
+var socket = io();
+$(".form-check-input").click(function(){
+    if($(this).siblings(".test").text()=="0")
+    {
+        checkedBrand.push($.trim($(this).siblings(".brandName").text()))
+        $(this).siblings(".test").text("1")
+    }
+    else
+    {
+        const index = checkedBrand.indexOf($.trim($(this).siblings(".brandName").text()));
+        if (index > -1) {
+            checkedBrand.splice(index, 1);
+        }
+        $(this).siblings(".test").text("0")
+    }
+    socket.emit("hamada",checkedBrand)
+})
+socket.on("replay",(data)=>{
+    console.log(data);
+})
+// $(".mobileLists").html(mobsArray)
+// $(".form-check-input").click(function (){
+//     let showedPhones=[]
+//     if($(this).siblings(".test").text()=="0")
+//     {
+//         checkedBrand.push($.trim($(this).siblings(".brandName").text()))
+//         $(this).siblings(".test").text("1")
+//     }
+//     else
+//     {
+//         const index = checkedBrand.indexOf($.trim($(this).siblings(".brandName").text()));
+//         if (index > -1) {
+//             checkedBrand.splice(index, 1);
+//         }
+//         $(this).siblings(".test").text("0")
+//     }
+//     for (let i = 0; i < mobsArray.length; i++) {
+//         for (let j = 0; j < checkedBrand.length; j++) {
+//             if (mobsArray[i].includes(checkedBrand[j]) || mobsArray[i].includes(checkedBrand[j].toLowerCase())) {
+//                 showedPhones.push(mobsArray[i])
+//             }
+//         }
+//     }
+//     if(showedPhones.length>0)
+//         $(".mobileLists").html(showedPhones)
+//     else{
+//         $(".mobileLists").html(mobsArray)
+//     }
+// })
+console.log($(".anything").html());
+$(".inpSearch").keyup(function () {
+    $(".seachSpan").text($(".inpSearchRT").val());
+    addProduct($(".inpSearchRT").val());
+    console.log(posts);
+    console.log($(".inpSearchRT").val());
+})
+$(".inpSearch").click(function () {
+    $(".mySearch").slideToggle()
+})
 $(".dashbtn").click(function(){
     $(".leftsidebar").css({left:'0%'});
     $(".leftnavwall").css({left:'25%'})
@@ -157,11 +234,9 @@ $(".fil").click(function(){
 $(".filexit").click(function(){
     $(".filter").animate({top:"100%"},500)
 })
-
 $(".proimg").click(function(){
     $(".productimg").css("backgroundImage",'url("file:///E:/Questions/BeGroup/cloth%20shopping/'+$(this).attr('src')+'")');
 })
-
 $(".prodrop").click(function(){
     $(this).parent().find("ul").slideToggle();
     $(this).parent().siblings().find("ul").slideUp();
@@ -213,16 +288,13 @@ $(".star").click(function(){
           $(".min").text( values[handle].split(".")[0]);
       }
   });
-
   minCostInput.addEventListener('change', function(){
       slider.noUiSlider.set([null, this.value]);
   });
-
   maxCostInput.addEventListener('change', function(){
       slider.noUiSlider.set([null, this.value]);
   });
   var slider = document.getElementById('range2');
-
   noUiSlider.create(slider, {
       start: [ 6000,15000 ], // Handle start position
       connect: true,
@@ -235,7 +307,6 @@ $(".star").click(function(){
   });
   var minCostInput2 = document.getElementById('minCost2'),
       maxCostInput2 = document.getElementById('maxCost2');
-
   // When the slider value changes, update the input and span
   slider.noUiSlider.on('update', function( values, handle ) {
       if ( handle ) {
@@ -246,15 +317,12 @@ $(".star").click(function(){
           $(".min2").text( values[handle].split(".")[0]);
       }
   });
-
   minCostInput2.addEventListener('change', function(){
       slider.noUiSlider.set([null, this.value]);
   });
-
   maxCostInput2.addEventListener('change', function(){
       slider.noUiSlider.set([null, this.value]);
   });
-
 var mobile=500;
 console.log(mobile);
 $(document).on("mousewheel", function() {
@@ -281,3 +349,26 @@ $(".brandOption").click(function () {
     $(this).siblings().css("background-color","#fff")
     $(this).siblings().css("color","#000")
 })
+function getPosts()
+{
+    console.log("running");
+    var req=new XMLHttpRequest();
+    req.open("GET","https://restcountries.eu/rest/v2/all");
+    req.onreadystatechange =function()
+    {
+        if(req.readyState==4 && req.status==200)
+            {
+                posts=JSON.parse(req.response);
+                display()
+            }
+    }
+    req.send();
+}
+function display()
+{
+    var str="";
+    for (let i = 0; i < posts.length; i++) {
+        str+=`<option>`+posts[i].name+`</option>`
+    }
+    $(".anything").html(str)
+}

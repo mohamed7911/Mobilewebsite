@@ -1,0 +1,105 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<div class="container my-4">
+    <%- include('F-navbar.ejs')%>
+</div>
+    <section>
+        <div class="container">
+            <div>
+                <div class="row">
+                    <div class="col-3 pr-0" style="overflow:hidden;position: relative;">
+                        <div class="imgtxtRevs">
+                            <p class="text-white">Consectetur adipisicing elit sed do minim eiusmod tempor.</p>
+                        </div>
+                        <div class="imgBgRevs">
+                            <div class="imgOLRevs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-0" style="overflow:hidden;position: relative;">
+                        <div class="imgtxtRevs">
+                            <p class="text-white">Consectetur adipisicing elit sed do minim eiusmod tempor.</p>
+                        </div>
+                        <div class="imgBgRevs">
+                            <div class="imgOLRevs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-0" style="overflow:hidden;position: relative;">
+                        <div class="imgtxtRevs">
+                            <p class="text-white">Consectetur adipisicing elit sed do minim eiusmod tempor.</p>
+                        </div>
+                        <div class="imgBgRevs">
+                            <div class="imgOLRevs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-0" style="overflow:hidden;position: relative;">
+                        <div class="imgtxtRevs">
+                            <p class="text-white">Consectetur adipisicing elit sed do minim eiusmod tempor.</p>
+                        </div>
+                        <div class="imgBgRevs">
+                            <div class="imgOLRevs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <h2 class="revsHead">Reviews</h2>
+                <hr class=" mt-0">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="https://www.devsnews.com/template/znews/znews/images/post/a/1.jpg" class="img-fluid" alt="">
+                        <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <img src="https://www.devsnews.com/template/znews/znews/images/post/d/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <p>Nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <img src="https://www.devsnews.com/template/znews/znews/images/post/d/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <p>Nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <img src="https://www.devsnews.com/template/znews/znews/images/post/d/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <p>Nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <img src="https://www.devsnews.com/template/znews/znews/images/post/d/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <p>Nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% for( let i = 0; i < result.length; i++ ) { %>
+                <div class="row justify-content-center m-0 border bg-white my-4 px-5 py-4 align-items-center">
+                    <div class="col-md-8">
+                        <h3><a href="/news-content/<%= result[i].id %>" class="allNewsTitle"><%= result[i]["title"] %></a></h3>
+                        <p><%= result[i]["desc"].slice(0,200)  %><% if (result[i]["desc"].length>200) { %>...<% } %></p>
+                        <p><%= result[i]["date"] %></p>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <a href="/news-content/<%= result[i].id %>"><img src="https://www.devsnews.com/template/znews/znews/images/post/trend/c/8.jpg" width="100px" alt=""></a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+<%- include('end.ejs')%>

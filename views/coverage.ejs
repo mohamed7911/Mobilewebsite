@@ -1,0 +1,134 @@
+<%- include('head.ejs')%>
+<%- include('navbar.ejs')%>
+<section class="contact contactBody">
+    <!-- <div class=" contactBg pt-4">
+        <div class="container pb-5">
+            <%- include('F-navbar.ejs')%>
+            <div class="pt-5">
+                <p class="heading"><span class="">Coverage</span></p>
+                <h3 style="color:#BDAB98">The operating frequency bands of any mobile phone is an important element. The compatibility of a handset with a network carrier depends on its frequency bands.
+                    We provide you with our own country-based frequency band directory. It can help you to determine whether your phone will work in a certain country.</h3>
+                    <select class="anything" name="" id="" onchange="javascript:handleSelect(this)">
+                        <% for( let i = 0; i < result.length; i++ ) { %>
+                            <% if (result[i]['country']==data['country']) { %>
+                                <option value="<%= result[i]['country']%>" selected><%= result[i]['country']%></option>
+                            <% } %>
+                            <option value="<%= result[i]['country']%>"><%= result[i]['country']%></option>
+                        <% } %>
+                    </select>
+                <div class="row mt-5" style="color:#979797">
+                    <div class="col-md-1 border-right">
+                        <p>2G</p>
+                        <p>3G</p>
+                        <p>4G</p>
+                        <p>5G</p>
+                    </div>
+                    <div class="col-md-11">
+                        <p><%= data['SecondG'] %> </p>
+                        <p><%= data['ThirdG'] %> </p>
+                        <p><%= data['FourthG'] %> </p>
+                        <p><%= data['FifthG'] %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container  pt-4">
+        <p><B>2G</B> (second generation of cellular telephone technology), in 1992 it was firstly announced, it was the first to use digital encryption conversations. 2G networks were the first to offer SMS texts and data services, however its data transfer rates are lower than those next-in-line.</p>
+        <p><B>3G</B> (third generation of cellular telephone technology), came after the 2G networks, providing video calls and faster data transfers.3G networks are very suitable for modern mobile phones, as the supply them with constant high-speed connection for their application.</p>
+        <p><B>4G</B> (fourth generation of cellular telephone technology), it came after the 3G and it supply ultra-broadband internet access for mobile devices. Its suitable for operation in USB wireless modems for home internet access and laptops due to the high data transfer rates.</p>
+        <p><B>5G</B> (fourth generation of cellular telephone technology), it’s the successor to the 4G and its super-fast than the previous generations by a huge margin. The 5G is 10x faster and enables more devices to be connected at the same time but has a very low latency (50x lower latency).</p>
+    </div> -->
+    <div class=" contactBg pt-4" style="font-size: 18px;">
+        <div class="container pb-5">
+            <%- include('F-navbar.ejs')%>
+            <div class="row w-100 mx-auto pt-5">
+                <div class="col-3 px-0">
+                    <div>
+                        <div class="row w-100 mx-auto CoverageBrandsBox">
+                            <% for( let i = 0; i < arr.length; i++ ) { %>
+                                <% if (i==18) { i++ } %>
+                                <div class="col-3 py-2 CoverageBrandsBoxRight px-2">
+                                    <div class="coverageBrands CoverageBrandsBox text-center" style="font-size: 14px;">
+                                        <a href="/brands/<%= arr[i].name %>">
+                                            <%= arr[i].name %> 
+                                        </a>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                        <div class="">
+                        <div class="coverageNeonBtn mt-2 text-center">
+                            <a href="/brands">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div>View all brands</div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row latestPhones bg-white mr-1">
+                            <% for( let i = 0; i < latestPhones.length; i++ ) { %>
+                                <div class="col-6 text-center">
+                                    <img class="img-fluid" width="100px" src="https://res.cloudinary.com/dad10qyqd/image/upload/v1633754817/images/Phones/<%=latestPhones[i].img%>.<%=latestPhones[i].img.split(".")[1]%>" alt="">
+                                    <p> <%= latestPhones[i].title %>  </p>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 pb-2 pr-0">
+                    <div class="coverageBackground rounded mb-3 pb-4 d-flex">
+                        <p class="text-white fa-2x ml-4 mt-auto">Network Coverage</p>
+                    </div>
+                    <div>
+                        <p>The operating frequency bands of any mobile phone is an important element. The compatibility of a handset with a network carrier depends on its frequency bands.
+                        <br>
+                        We provide you with our own country-based frequency band directory. It can help you to determine whether your phone will work in a certain country.
+                        </p> 
+                        <label for="">Select your country: </label>
+                        <select class="anything ml-2" name="" id="" onchange="javascript:handleSelect(this)">
+                            <% for( let i = 0; i < result.length; i++ ) { %>
+                                <% if (result[i]['country']==data['country']) { %>
+                                    <option value="<%= result[i]['country']%>" selected><%= result[i]['country']%></option>
+                                <% } %>
+                                <option value="<%= result[i]['country']%>"><%= result[i]['country']%></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    
+                    <div class="row mt-5" style="color:#979797">
+                        <div class="col-md-1 border-right">
+                            <p>2G</p>
+                            <p>3G</p>
+                            <p>4G</p>
+                            <p>5G</p>
+                        </div>
+                        <div class="col-md-11">
+                            <p><%= data['SecondG'] %> </p>
+                            <p><%= data['ThirdG'] %> </p>
+                            <p><%= data['FourthG'] %> </p>
+                            <p><%= data['FifthG'] %> </p>
+                        </div>
+                    </div>
+                    <div class="container pl-0 pt-4">
+                        <p><B>2G</B> (second generation of cellular telephone technology), in 1992 it was firstly announced, it was the first to use digital encryption conversations. 2G networks were the first to offer SMS texts and data services, however its data transfer rates are lower than those next-in-line.</p>
+                        <p><B>3G</B> (third generation of cellular telephone technology), came after the 2G networks, providing video calls and faster data transfers.3G networks are very suitable for modern mobile phones, as the supply them with constant high-speed connection for their application.</p>
+                        <p><B>4G</B> (fourth generation of cellular telephone technology), it came after the 3G and it supply ultra-broadband internet access for mobile devices. Its suitable for operation in USB wireless modems for home internet access and laptops due to the high data transfer rates.</p>
+                        <p><B>5G</B> (fifth generation of cellular telephone technology), it’s the successor to the 4G and its super-fast than the previous generations by a huge margin. The 5G is 10x faster and enables more devices to be connected at the same time but has a very low latency (50x lower latency).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    function handleSelect(elm)
+    {
+        window.location = elm.value;
+    }
+</script>
+<%- include('end.ejs')%>

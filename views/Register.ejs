@@ -1,0 +1,31 @@
+<%- include('head.ejs')%>
+<body>
+<%- include('navbar.ejs')%>
+    <div class="container">
+        <form action="/SignUpHandle" method="POST" enctype="multipart/form-data">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="userName" type="text" class="form-control" placeholder="name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="email" type="text" class="form-control" placeholder="name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="password" type="text" class="form-control" placeholder="name">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="confirmPassword" type="text" class="form-control" id="inputimg" placeholder="Image">
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100">Submit</button>  
+            </div>
+        </form>
+    </div>
+<%- include('end.ejs')%>

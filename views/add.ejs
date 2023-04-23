@@ -3,7 +3,7 @@
     <%- include('navbar.ejs')%>
     <div class="container">
       <form action="/add-employee" method="POST" enctype="multipart/form-data">
-        <div class="row mt-5" >
+        <!-- <div class="row mt-5" >
 
         <div class="col-md-6">
             <div class="form-group  ">
@@ -19,17 +19,17 @@
                   <% } %>
                 </optgroup>
             </select>
-        </div>
+        </div> -->
         <div class="col-md-12">
             <div class="form-group  ">
                 <input name="img" multiple type="file" class="form-control" id="inputimg" placeholder="Image">
             </div>
         </div>
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
             <div class="form-group  ">
                 <input name="desc" class="form-control" id="inputEmail" placeholder="desc">
             </div>
-        </div>
+        </div> -->
         <button class="btn btn-primary w-100">Submit</button>    
     </form>
     </div>

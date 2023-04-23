@@ -6,180 +6,193 @@
 <!--porducts-->
 <section class="product">
     <div class="container">
-        <div class="row holepr rounded">
-            <div class="col-lg-5 position-relative">
-                <div class="sticky">
-                    <img src="../images/1611868773581-item_XXL_131938441_cf423527d7ef9.jpg" class="d-block w-100 p-5" alt="...">
+        <div class="d-flex">
+            <h3 class="font-weight-bold"><%=result[0].title%></h3>
+        </div>
+        <div class="row holepr px-0 rounded">
+            <div class="col-lg-12 position-relative">
+                <div class="">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src=https://res.cloudinary.com/dad10qyqd/image/upload/v1633754817/images/Phones/<%=result[0].img%>.<%=result[0].img.split(".")[1]%>  class="d-block w-100 p-5" alt="...">
+                        </div>
+                        <div class="col-lg-4 d-flex">
+                            <div class="w-75 m-auto">
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="far fa-3x fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">Released</p>
+                                            <p class="m-0"><%=result[0]['data'][1]['Launch'][0]['Announced']%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fas fa-3x fa-expand"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">Display</p>
+                                            <p class="m-0"><%=result[0]['data'][3]['Display'][2]['Resolution']%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fas fa-3x fa-camera"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">Camera</p>
+                                            <p class="m-0"><%=result[0]['data'][6]['Main Camera'][0]['Triple'].split(",")[0]%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fas fa-3x fa-microchip"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">Hardware</p>
+                                            <p class="m-0"><%=result[0]['data'][4]['Platform'][1]['Chipset'].split(" (")[0]%> <%=result[0]['data'][4]['Platform'][2]['CPU'].split(" (")[0]%> <%=result[0]['data'][5]['Memory'][1]['Internal'].split(",")[0]%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fas fa-3x fa-battery-full"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">Battery</p>
+                                            <p class="m-0"><%=result[0]['data'][11]['Battery'][0]['Type'].split(",")[0]%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border my-3 rounded px-3 py-1">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="fas fa-3x fa-code"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0">OS</p>
+                                            <p class="m-0"><%=result[0]['data'][4]['Platform'][0]['OS'].split(",")[0]%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="m-auto">
+                                <div class="row">
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-3">
+                                        <div class="bg-dark p-3 rounded">
+                                            <p class="text-white">Camera <span class="float-right">9/10</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="">
-                    <div class="d-flex">
-                            <p class="font-weight-bold"><%=results['Brand']%> <%=results['Model'].replace("_","")%></p>
-                            <p class="font-weight-bold ml-auto">999.99 EGP</p>
-                        </div>
                     <div class="d-flex">
                         <img class="img-fluid px-1 proimg" src="images/man2.jpg" id="proimg1" alt="">
                         <img class="img-fluid px-1 proimg" src="images/man4.jpg" id="proimg2" alt="">
                         <img class="img-fluid px-1 proimg" src="images/man6.jpg" id="proimg3" alt="">
                         <img class="img-fluid px-1 proimg" src="images/man8.jpg" id="proimg4" alt="">
                     </div>
-                    <button class="btn btn-dark w-100 mt-3">Add to Cart</button>
-                    <button class="btn btn-outline-dark w-100 my-3">Add to Wishlist</button>
-                    <p>
-                        <% for( let i = 0; i < resultsKeys.length; i++ ) { %>
-                            <span><%= resultsKeys[i] %> : <%= results[resultsKeys[i].replace(" ","_")].replace("_","").replace("�","")  %> ,</span>
-                        <% } %>
-                    </p>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">Network</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
+                    <!-- <button class="btn btn-dark w-100 mt-3">Add to Cart</button>
+                    <button class="btn btn-outline-dark w-100 my-3">Add to Wishlist</button> -->
+                    <% for( let i = 0; i < result[0].data.length; i++ ) { %>
+                        <hr class="m-0">
+                        <div class="">
+                            <div class="px-4 rounded d-flex prodrop text-white bg-dark py-3">
+                                <h5 class="mb-0"><%=Object.keys(result[0].data[i])[0]%></h5>
+                                <i class="fas fa-angle-down ml-auto"></i>
+                            </div>
+                            <ul class="prolist list-group">
+                                <% for( let j = 0; j < result[0].data[i][Object.keys(result[0].data[i])[0]].length; j++ ) { %>
+                                    <% if (Object.keys(result[0].data[i][Object.keys(result[0].data[i])[0]][j])[0] != "") { %>
+                                        <li class="list-group-item"><spam class="proTitle"><spam class="text-danger"><%= Object.keys(result[0].data[i][Object.keys(result[0].data[i])[0]][j])[0] %></spam>  :  <%=result[0].data[i][Object.keys(result[0].data[i])[0]][j][Object.keys(result[0].data[i][Object.keys(result[0].data[i])[0]][j])[0]]%></spam></li>
+                                    <% } %>
+                                <% } %>
+                            </ul>
                         </div>
-                        <ul class="prolist pt-3">
-                            <li>Technology :  <%= results["Network"]  %></li>
-                            <li>Network Speed :  <%= results["Network_Speed"]  %></li>
-                            <li>2G :  <%= results["TwoG"]  %></li>
-                            <li>3G :  <%= results["ThreeG"]  %></li>
-                            <li>4G :  <%= results["FourG"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">Launch</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Announced :  <%= results["Announced"]  %></li>
-                            <li>Status  :  <%= results["Status"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">BODY</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Dimensions :  <%= results["Dimensions"]  %></li>
-                            <li>SIM :  <%= results["SIM"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">DISPLAY</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Type :  <%= results["Display_type"]  %></li>
-                            <li>Size :  <%= results["Display_size"]  %></li>
-                            <li>Resolution :  <%= results["Display_resolution"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">PLATFORM</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>OS :  <%= results["Operating_System"]  %></li>
-                            <li>Chipset :  <%= results["Chipset"]  %></li>
-                            <li>CPU :  <%= results["CPU"]  %></li>
-                            <li>GPU :  <%= results["GPU"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">MEMORY</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Card slot :  <%= results["Memory_card"]  %></li>
-                            <li>Internal :  <%= results["Internal_memory"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">MAIN CAMERA</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Camera :  <%= results["Primary_camera"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">SELFIE CAMERA</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Camera :  <%= results["Secondary_camera"].replace("�","")  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">SOUND</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Loudspeaker :  <%= results["Loud_speaker"]  %></li>
-                            <li>Audio jack :  <%= results["Audio_jack"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">COMMS</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>WLAN :  <%= results["WLAN"]  %></li>
-                            <li>Bluetooth :  <%= results["Bluetooth"]  %></li>
-                            <li>GPS :  <%= results["GPS"]  %></li>
-                            <li>NFC :  <%= results["NFC"]  %></li>
-                            <li>Radio :  <%= results["Radio"]  %></li>
-                            <li>USB :  <%= results["USB"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">FEATURES</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Sensors :  <%= results["Sensors"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">BATTERY</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Type :  <%= results["Battery"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="px-4">
-                        <div class="d-flex prodrop">
-                            <p class="mb-0">MISC</p>
-                            <i class="fas fa-angle-down ml-auto"></i>
-                        </div>
-                        <ul class="prolist pt-3">
-                            <li>Colors :  <%= results["Colors"]  %></li>
-                        </ul>
-                    </div>
-                    <hr>
+                    <% } %>
                 </div>
             </div>
         </div>

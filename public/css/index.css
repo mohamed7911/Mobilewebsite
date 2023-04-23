@@ -1,6 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'STIX Two Text', serif;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
 }
 .container{
     max-width: 1400px;
@@ -473,7 +482,7 @@ height: 80px;
 /*home*/
 .wallpaper{
     height: 800px;
-    background-image: url(../images/section01.jpg);
+    background-image: url(https://res.cloudinary.com/dad10qyqd/image/upload/v1633726090/images/Ours/section01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -771,7 +780,7 @@ height: 80px;
 .contactBg{
     background-color: #f3f2f0;
     background-image: linear-gradient(#fff,#f3f2f0);
-    height: 65vh;
+    height: 100%;
 }
 .heading{
     font-size: 40px;
@@ -789,6 +798,9 @@ height: 80px;
 /*product*/
 .product{
     padding: 70px 0 50px 0;
+}
+.proTitle{
+    font-size: 20px;
 }
 .holepr{
     padding:30px;
@@ -1061,7 +1073,42 @@ height: 80px;
 }
 /*neon btn*/
 /* news */
-.newsImg{
+.newsHead{
+    padding-bottom: 0%;
+    background-color: purple;
+    color: #fff;
+    width: 10%;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+.imgBg{
+    background-image: url(https://www.devsnews.com/template/znews/znews/images/post/trend/c/8.jpg);
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+    transition: all 1s;
+}
+.imgOL{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 1s;
+}
+.imgBg:hover div{
+    opacity: 1;
+}
+.imgBg:hover{
+    transform: scale(110%);
+}
+.imgtxt{
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    z-index: 999;
+    font-size: 24px;
+    color: red;
 }
 .background{
     background-image: url(../../images/9c912c6125bfe08fed6c0d08b3430011.jpg);
@@ -1090,3 +1137,211 @@ height: 80px;
     color: #000;
 }
 /* news */
+/* revs */
+.revsHead{
+    padding-bottom: 0%;
+    background-color: purple;
+    color: #fff;
+    width: 10%;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+.imgBgRevs{
+    background-image: url(https://www.devsnews.com/template/znews/znews/images/post/trend/c/8.jpg);
+    height: 450px;
+    width: 100%;
+    background-size: cover;
+    transition: all 1s;
+}
+.imgOLRevs{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 1s;
+}
+.imgBgRevs:hover div{
+    opacity: 1;
+}
+.imgBgRevs:hover{
+    transform: scale(110%);
+}
+.imgtxtRevs{
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    z-index: 999;
+    font-size: 24px;
+    color: red;
+}
+.backgroundRevs{
+    background-image: url(../../images/9c912c6125bfe08fed6c0d08b3430011.jpg);
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.newsTitle{
+    color: #fff;
+    z-index: 1;
+}
+.newsDiv{
+    overflow: hidden;
+    border-radius: 5px;
+}
+.allNewsTitle{
+    color: #000;
+}
+.allNewsTitle:hover{
+    color: #000;
+}
+/* revs */
+/* compare */
+.searchDD{
+    background-color:#ebeeef;
+}
+.mySearch{
+    display: none;
+}
+/* compare */
+
+
+
+
+
+
+
+.wrapper {
+    margin: 60px auto;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 1.25em;
+}
+#pagination-demo {
+    display: inline-block;
+    margin-bottom: 1.75em;
+}
+#pagination-demo li {
+    display: inline-block;
+}
+.page-content {
+    background: #eee;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    max-width: 660px;
+}
+/* coverage */
+.coverageBrands:hover{
+    background-color: grey;
+}
+.coverageBackground{
+    height:200px;
+    background-image: url(../../images/atik-sulianami-Ko9JTVSt6Ok-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.CoverageBrandsBox{
+    border: 1px black solid;
+    border-radius: 2px;
+}
+.CoverageBrandsBoxRight{
+    border-right: 1px black solid;
+}
+.coverageNeonBtn a {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 100%;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.coverageNeonBtn a:hover {
+    color: #ffffff;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
+    transition-delay: 1s;
+}
+.coverageNeonBtn a span {
+    position: absolute;
+    display: block;
+}
+.coverageNeonBtn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+.coverageNeonBtn a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+.coverageNeonBtn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+.coverageNeonBtn a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.coverageNeonBtn a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+.coverageNeonBtn a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.coverageNeonBtn a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+.coverageNeonBtn a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.latestPhones{
+    height:400px;
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.latestPhones::-webkit-scrollbar {
+  width:7px;
+}
+.latestPhones::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+.latestPhones::-webkit-scrollbar-thumb {
+  background: #3FB8AF; 
+  border-radius: 10px;
+}
+/* coverage */
